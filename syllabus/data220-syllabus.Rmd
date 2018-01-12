@@ -1,0 +1,212 @@
+---
+title: "DATA 220G Spring 2018"
+author: ""
+output:
+  html_document:
+    theme: simplex
+    toc: true
+    toc_float: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(tidy = FALSE)
+options(htmltools.dir.version = FALSE)
+library(hrbrthemes)
+library(tidyverse)
+```
+|                      |                                                     |
+|----------------------|-----------------------------------------------------|
+| Course:              | &nbsp;DATA220G - Data Analysis with R               |
+| Semester:            | &nbsp;Spring 2018                                   |
+| Instructor:          | &nbsp;Bob Rudis                                     |
+| Contact Email:       | &nbsp;[rrudis@ccsnh.edu](mailto:rrudis@ccsnh.edu)   |
+| Day/Time:            | &nbsp;Online                                        |
+| Office hours:        | &nbsp;By appointment (virtual)                      |
+| Textbook:            | &nbsp;R for Data Science / Advanced R (see below)   |
+
+# Catalog Description (adjusted)
+
+This course is an applied data science & statistics course that introduces students to key, modern topics in icluding data acquisition, data exploration, statistical data analysis and communicating the results of data analyses. Major topics include advanced R programming language concepts, working as a standalone data analyst and within a team, organizing analysis projects, finding data on the internet, web scraping & APIs, and a survey of modeling, clustering, classification and time series analysis and forecasting tools & techniques. Prerequisites: C or better in DATA210G (or by department approval) and MATH235G (may be co-requisite).
+
+# Desired Student Competencies
+
+Students will:
+
+- Produce data analysis projects from start to finish individually and as a team.
+- Ask and anwer key questions from data sources provided or selected.
+- Communicate results clearly through text, code and visulizations.
+- Validate findings with basic statistics and machine learning techniques.
+- Show proficiency using version control systems.
+
+# Grading/Assessment
+
+```{r echo=FALSE, fig.width=6, fig.height=4, fig.retina=2}
+assess <- data_frame(topic=c("Participation", "Homework", "Quizzes", "Projects", "Final Exam"),
+                     pct=c(0.1, 0.1, 0.1, 0.5, 0.2), 
+                     pct_lab=scales::percent(pct))
+ggplot(assess, aes(topic, pct)) +
+  geom_col(width=0.75, fill="lightslategray") +
+  geom_text(aes(label=pct_lab), nudge_y=0.025, family=font_ps, size=3) +
+  scale_y_continuous(expand=c(0,0), breaks=c(0, 0.25, 0.5), limits=c(0,0.6)) +
+  coord_flip() +
+  labs(x=NULL, y=NULL) +
+  theme_ipsum_ps(grid="X", axis="y") +
+  theme(axis.text.x=element_blank())
+```
+
+# College Email
+
+I send all class announcements to you at your college email address through Blackboard/Canvas. You are responsible to check your college email regularly for any and all communication sent to you. Email addresses can be found at the Student Information (SIS) site. Any official correspondence (i.e. notification of absence, withdrawl, etc) not using college email is subject to quarantine and/or removal from the CCSNH email server and will not be answered. If there are technical questions (apart from accessing the RStudio Server setup for the class) that need to be answered, please access the helpdesk. The address is <http://greatbay.edu/helpdesk>. Personal email addresses cannot be used because SIS and Blackboard/Canvas are not set up to accommodate them. I check email regularly and will do my best to reply to your email within 24 hours. Again, I only reply to official email from your college address.
+
+# Class Time
+
+Class will be instruction, homework/project review and discussion of new projects. The class will be delivered remotely and the instructor will be available for ad-hoc office hours as needed. The instructor will also work out a 1:1 weekly online "check-in" schedule with the students to ensure there is a dedicated time to answer questions.
+
+# Student Essentials
+
+- You must return the pre-assessment questionnaire the same day within 48 hours as it will determine the content of the full syllabus for the semester. The level of depth for each topic in the course is highly dependent upon the answers to the assessment. You are not being graded on the assessment, and answering it completely and honestly will enable you to derive the most benefit from the course.<br/><br/>
+- You must have access to a working version of R and RStudio. I will be using the 3.4.x series of R and the "Preview" edition of RStudio, but the standard installation of RStudio should be fine. The following resources are available to help you install them:
+    - [Install R & RStudio](http://stat545.com/block000_r-rstudio-install.html)
+    - [Basic intro to working in R & RStudio](http://stat545.com/block002_hello-r-workspace-wd-project.html)
+    - [Install Rtools for Windows](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows) (for those unfortunate enough to be running Windows systems)<br/><br/>
+- I will be sending out a link to individual logins to a 24x7 (barring internet or cloud provider outages) internet-accessible RStudio Server. This is the "no excuses" R programming environment for the course. You _are not required_ to use this server _but_ you cannot use issues with your local R installation as an excuse for turing in assignments, quizzes or tests late. <br/><br/>
+- **YOU ABSOLUTELY WILL NEED** a free [GitHub](http://github.com/) account. You must set one up by the end of the first week of class if you do not have one already. You will be creating a separate, public repository for each homework or project, creating "releases" and submitting the releases to BB/Canvas along with a link to the repository. These repositories must exist for the entire semester as some will build upon others. Individuals who have moral/ethical/etc concerns with GitHub may choose to use other servics such as [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) account. The following resources are available to help you get working with GitHub & R/RStudio on all platforms:
+    - [Happy Git & GitHub for the useR](http://happygitwithr.com/)
+
+# Attendance/Participation Policy
+
+Videos will be made and posted online. You are responsible for viewing the content. If there are any issues with the content or accessing the content you are responsible for notifying the instructor when you encouter the issue.
+
+# Registrar Procedures Add/Drop Deadlines and Procedures:
+
+Please see the official Planning Calendar (available in all the usual places you're familiar with) for deadlines with the registrar: deadline to drop with full refund, deadline to drop with a "W", and deadline to drop with "WP/WF".
+
+In order to drop this class you must fill out an add/drop form and return this form to the One Stop office for processing. Simply ceasing to attend class or contacting the instructor does not constitute officially dropping the course.
+
+**If you are receiving Financial Aid, you should speak with that office before deciding to withdraw.**
+
+You may withdraw from the course and receive the grade of W, which does not impact your GPA (see Planning Calendar on the last page for this deadline date). No signature from the instructor is required. If past this deadline, the next option is to drop with a "WP/WF". This option does require an instructor signature and can affect GPA.
+
+# Classroom Decorum/Code of Conduct
+
+In order to create a healthy and productive learning environment there are expectations of all of us. These include:
+
+-  Civility in behavior and respect for the rights and opinions of others seeking to learn is highly valued. Please be courteous and respectful at all times. When disagreeing with another's point of view, no belittling, condemnation or put-downs will be tolerated; keep all comments constructive and helpful in nature.
+- It is expected that students will be respectful of GBCC staff and GBCC students. GBCC has a no bullying policy. The Student Code of Conduct can be found in the Student Handbook. The handbook can be found on the College website. Students are responsible for being familiar with the Student Code of Conduct.
+- It is expected that we will behave in a manner that is ethically consistent with college policy and in a manner that could not be interpreted as cheating or plagiarism.
+- The college defines Plagiarism as, "the intentional or unintentional failure to immediately, accurately, and completely cite and document the source of any language, ideas, summaries, hypotheses, conclusions, interpretations, speculations, graphs, charts, pictures, etc., or other material not entirely your own. This includes failure to cite work of your own that you have used previously."
+-  Cheating is defined as using or attempting to use unauthorized materials, information, or study aids in any academic exercise or activity. Failure to meet this expectation could result in a grade of F for the course.
+- Consequences for acts of plagairism and/or cheating result in a minimum of 0 for that assignment/quiz/test and maximum of F for the course, depending on the severity of the infringement of the policy.
+
+- I welcome and encourage your input intended to improve the quality of your educational experience.
+
+# Weather Alerts
+
+If school is cancelled for any reason, you should receive an email and/or a phone message from GBCC alerting you. Sign up for "weather alerts" online if you would like a text message. The text messaging service is called "GBCC Alerts" and you will find information to register here: [GBCC Alerts](http://greatbay.edu/campus-life/notifications-announcements)
+
+This should not apply to us.
+
+# Cancellations
+
+If an emergency arises, I will notify Academic Affairs that any scheduled interactive sessions will be cancelled and I will send you an email to your college email address via BB/Canvas.
+
+# Student Support and CAPS
+
+The College is committed to providing support for students with disabilities. Any student with physical, learning, attention, and/or psychological disabilities is encouraged to visit the Center for Academic Planning and Support (CAPS) and make an appointment with the Coordinator of Disability Support Services. More information is available at <http://greatbay.edu/student-services/academic-support/disability-services>
+
+The Center for Academic Planning and Support (CAPS) has a variety of services to support your academic success at Great Bay Community College. These include:
+
+-  Math drop-in assistance from a GBCC math instructor (no appointment needed). Fall Term 2013 drop-in times at posted in CAPS and on CAPS website.
+-  Free tutoring support on an individual 1-1 basis. For more information about tutoring times, access, availability contact Tutor Coordinator, Carol Despres, at 603-427-7623 or email: cdespres@ccsnh.edu. Schedules are posted at CAPS and updated periodically during each semester at www.greatbay.edu/CAPS
+-  Study Groups organization and tutor facilitation
+-  CAPS open computer lab with various course software.
+-  Individual academic counseling for setting goals, organization, time
+management and finding strategies to increase learning and performance
+-  Assistive technology
+-  ESOL support, nontraditional/gender equity and single parent support
+-  Career exploration
+-  Academic workshops - times posted each semester.
+-  Locations are: 210 at Portsmouth campus and 115 at Rochester campus
+
+Check with CAPS to see all that is available for support for this class.
+
+# Texts
+
+Working in data science means keeping up with advancements in the field (and it is a _broad_ field). Here are some key supplemental texts we will be using as part of the course:
+
+- [Advanced R](http://adv-r.had.co.nz/) (Free online)
+- [R for Data Science](http://r4ds.had.co.nz/) (Free online)
+
+**All** of my references to reading assignments will be from the _online_ version of these books. You will be responsible for translating back to physical book references.
+
+I'm going to be taking excerpts from [Applied Predictive Modeling](http://appliedpredictivemodeling.com/toc/) and presenting them during the class. You don't need to buy the book. Having said that, this is a seminal reference that I keep on my desk at all times.
+
+These are some good sites to keep as reference:
+
+- [Beginner's Guide to R](http://www.computerworld.com/article/2497143/business-intelligence/business-intelligence-beginner-s-guide-to-r-introduction.html)
+- [Intro to R](https://www.datacamp.com/courses/free-introduction-to-r)
+- [R Cookbook](http://www.cookbook-r.com/)
+- [Markdown Reference](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [RStudio Resources](https://www.rstudio.com/resources/cheatsheets/)
+
+# Other resources
+
+- I'm supposed to store things in Blackboard/Canvas so that's going to be the system of record. 
+
+# Planning Calendar (will be finalized after receipt of questionnaires)
+
+See the [official calendar](http://greatbay.edu/academiccalendar?type=list) for the add/drop & official vacation info.
+
+          January           
+    Su Mo Tu We Th Fr Sa    
+    14 15 16 17 18 19 20  Week 1: Classes start 01-16  
+    21 22 23 24 25 26 27  Week 2
+    28 29 30 31             
+     
+          February      
+    Su Mo Tu We Th Fr Sa 
+                 1  2  3 Week 3
+     4  5  6  7  8  9 10 Week 4
+    11 12 13 14 15 16 17 Week 5
+    18 19 20 21 22 23 24 Week 6: NO CLASSES 02-19
+    25 26 27 28         
+     
+           March
+    Su Mo Tu We Th Fr Sa
+                 1  2  3 Week 7
+     4  5  6  7  8  9 10 Week 8
+    11 12 13 14 15 16 17 Week 9: **Spring Break NO CLASSES
+    18 19 20 21 22 23 24 Week 10
+    25 26 27 28 29 30 31 Week 11
+     
+           April         
+    Su Mo Tu We Th Fr Sa 
+     1  2  3  4  5  6  7 Week 12
+     8  9 10 11 12 13 14 Week 13
+    15 16 17 18 19 20 21 Week 14
+    22 23 24 25 26 27 28 Week 15
+    29 30                
+     
+            May         
+    Su Mo Tu We Th Fr Sa
+           1  2  3  4  5 Week 16: LAST DAY OF CLASS 05-04
+     6  7  8  9 10 11 12 Week 17: Grades due 05-08
+
+| Week  | Reading  | Notes  |
+|------:|---|---|
+|  1    |   |   |
+|  2    |   |   |
+|  3    |   |   |
+|  4    |   |   |
+|  5    |   |   |
+|  6    |   |   |
+|  7    |   |   |
+|  8    |   |   |
+|  9    |   |   |
+|  10   |   |   |
+|  11   |   |   |
+|  12   |   |   |
+|  13   |   |   |
+|  14   |   |   |
+|  15   |   |   |
+|  16   |   |   |
+|  17   |   |   |
