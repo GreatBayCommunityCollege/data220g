@@ -4,8 +4,6 @@ author: ""
 output:
   html_document:
     theme: simplex
-    toc: true
-    toc_float: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(tidy = FALSE)
@@ -191,22 +189,64 @@ See the [official calendar](http://greatbay.edu/academiccalendar?type=list) for 
            1  2  3  4  5 Week 16: LAST DAY OF CLASS 05-04
      6  7  8  9 10 11 12 Week 17: Grades due 05-08
 
-| Week  | Reading  | Notes  |
-|------:|---|---|
-|  1    |   |   |
-|  2    |   |   |
-|  3    |   |   |
-|  4    |   |   |
-|  5    |   |   |
-|  6    |   |   |
-|  7    |   |   |
-|  8    |   |   |
-|  9    |   |   |
-|  10   |   |   |
-|  11   |   |   |
-|  12   |   |   |
-|  13   |   |   |
-|  14   |   |   |
-|  15   |   |   |
-|  16   |   |   |
-|  17   |   |   |
+
+# Syllabus
+
+## Week 1
+
+### Instruction
+
+By the end of Week 1, you should:
+
+- **Install R**:
+    - R &#x21A6; <https://cloud.r-project.org/bin/windows/base/>
+- **Install Rtools**:
+    - Rtools &#x21A6; <https://cloud.r-project.org/bin/windows/Rtools/Rtools34.exe>
+- **Install RStudio**:
+    - RStudio &#x21A6; <https://www.rstudio.com/products/rstudio/download/#download>
+- **Login to the DATA 220G provided RStudio Server instance**:
+    - GBCC RStudio &#x21A6; <https://gbcc-rstudio.org>
+- **Setup a GitHub account**:
+    - Reference the above section(s) for links for how to do this
+- **Reading**:
+    - R for Data Science:
+        - Introduction &#x21A6; <http://r4ds.had.co.nz/introduction.html>
+        - Explore &#x21A6; Introduction &#x21A6; <http://r4ds.had.co.nz/explore-intro.html>
+        - Explore &#x21A6; Workflow: basics &#x21A6; <http://r4ds.had.co.nz/explore-intro.html>
+        - Explore &#x21A6; Workflow: projects &#x21A6; <http://r4ds.had.co.nz/workflow-projects.html>
+        - Explore &#x21A6; Data transformation &#x21A6; <http://r4ds.had.co.nz/transform.html>
+        - (SKIM) Explore &#x21A6; Data visualisation &#x21A6; <http://r4ds.had.co.nz/data-visualisation.html>
+
+### Project 01
+
+- Send your GitHub account (or just GitHub account handle) link to <mailto:rrudis@ccsnh.edu>
+- Create a folder either on the RStudio Server or your own workstation (or both!) named `data220g'.
+- Create an RStudio project in that folder named `week01`. 
+- After reviewing this week's video (link TBD):
+    - Copy the CSV file mentioned in the video to the `week01` folder you created above. You can also find it at 
+    - Create an R script named `week01.R` that:
+        - reads in the CSV file
+        - finds and reports the _year_ (only the year) with the lowest, average temperature
+        - finds and reports the _year+month+day_ with the highest, average temperature (converted to Celsius)
+        - computes and reports the mean and median averages temperatures per-month
+        - using the rounding technique from the video, computes the nearest-10 value for each average monthly temperature _then_ counts and reports how many average readings were in eaceh 10-"bucket"
+        - BONUS: Creates a simple plot showing trhe average montly temperature over time.
+    - We won't use GitHub for submissions this week (unless you are comfortable with that already). Make a ZIP file of your `week01` folder and submit it via Blackboard (I'm still working on Canvas access). If you are comfortable with GitHub, creatre a release and send me a link to it.
+- Submission is due by 23:59:59, Tuesday, January 23rd, 2018.
+
+## Week 2
+## Week 3
+## Week 4
+## Week 5
+## Week 6
+## Week 7
+## Week 8
+## Week 9
+## Week 10
+## Week 11
+## Week 12
+## Week 13
+## Week 14
+## Week 15
+## Week 16
+## Week 17
