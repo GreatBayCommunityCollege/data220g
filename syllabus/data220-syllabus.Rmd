@@ -23,15 +23,15 @@ library(tidyverse)
 
 # Catalog Description (adjusted)
 
-This course is an applied data science & statistics course that introduces students to key, modern topics in icluding data acquisition, data exploration, statistical data analysis and communicating the results of data analyses. Major topics include advanced R programming language concepts, working as a standalone data analyst and within a team, organizing analysis projects, finding data on the internet, web scraping & APIs, and a survey of modeling, clustering, classification and time series analysis and forecasting tools & techniques. Prerequisites: C or better in DATA210G (or by department approval) and MATH235G (may be co-requisite).
+This course is an applied data science & statistics course that introduces students to key, modern topics in including data acquisition, data exploration, statistical data analysis and communicating the results of data analyses. Major topics include advanced R programming language concepts, working as a standalone data analyst and within a team, organizing analysis projects, finding data on the internet, web scraping & APIs, and a survey of modeling, clustering, classification and time series analysis and forecasting tools & techniques. Prerequisites: C or better in DATA210G (or by department approval) and MATH235G (may be co-requisite).
 
 # Desired Student Competencies
 
 Students will:
 
 - Produce data analysis projects from start to finish individually and as a team.
-- Ask and anwer key questions from data sources provided or selected.
-- Communicate results clearly through text, code and visulizations.
+- Ask and answer key questions from data sources provided or selected.
+- Communicate results clearly through text, code and visualizations.
 - Validate findings with basic statistics and machine learning techniques.
 - Show proficiency using version control systems.
 
@@ -53,7 +53,7 @@ ggplot(assess, aes(topic, pct)) +
 
 # College Email
 
-I send all class announcements to you at your college email address through Blackboard/Canvas. You are responsible to check your college email regularly for any and all communication sent to you. Email addresses can be found at the Student Information (SIS) site. Any official correspondence (i.e. notification of absence, withdrawl, etc) not using college email is subject to quarantine and/or removal from the CCSNH email server and will not be answered. If there are technical questions (apart from accessing the RStudio Server setup for the class) that need to be answered, please access the helpdesk. The address is <http://greatbay.edu/helpdesk>. Personal email addresses cannot be used because SIS and Blackboard/Canvas are not set up to accommodate them. I check email regularly and will do my best to reply to your email within 24 hours. Again, I only reply to official email from your college address.
+I send all class announcements to you at your college email address through Blackboard/Canvas. You are responsible to check your college email regularly for any and all communication sent to you. Email addresses can be found at the Student Information (SIS) site. Any official correspondence (i.e. notification of absence, withdrawal, etc) not using college email is subject to quarantine and/or removal from the CCSNH email server and will not be answered. If there are technical questions (apart from accessing the RStudio Server setup for the class) that need to be answered, please access the helpdesk. The address is <http://greatbay.edu/helpdesk>. Personal email addresses cannot be used because SIS and Blackboard/Canvas are not set up to accommodate them. I check email regularly and will do my best to reply to your email within 24 hours. Again, I only reply to official email from your college address.
 
 # Class Time
 
@@ -66,13 +66,13 @@ Class will be instruction, homework/project review and discussion of new project
     - [Install R & RStudio](http://stat545.com/block000_r-rstudio-install.html)
     - [Basic intro to working in R & RStudio](http://stat545.com/block002_hello-r-workspace-wd-project.html)
     - [Install Rtools for Windows](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows) (for those unfortunate enough to be running Windows systems)<br/><br/>
-- I will be sending out a link to individual logins to a 24x7 (barring internet or cloud provider outages) internet-accessible RStudio Server. This is the "no excuses" R programming environment for the course. You _are not required_ to use this server _but_ you cannot use issues with your local R installation as an excuse for turing in assignments, quizzes or tests late. <br/><br/>
-- **YOU ABSOLUTELY WILL NEED** a free [GitHub](http://github.com/) account. You must set one up by the end of the first week of class if you do not have one already. You will be creating a separate, public repository for each homework or project, creating "releases" and submitting the releases to BB/Canvas along with a link to the repository. These repositories must exist for the entire semester as some will build upon others. Individuals who have moral/ethical/etc concerns with GitHub may choose to use other servics such as [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) account. The following resources are available to help you get working with GitHub & R/RStudio on all platforms:
+- I will be sending out a link to individual logins to a 24x7 (barring internet or cloud provider outages) internet-accessible RStudio Server. This is the "no excuses" R programming environment for the course. You _are not required_ to use this server _but_ you cannot use issues with your local R installation as an excuse for turning in assignments, quizzes or tests late. <br/><br/>
+- **YOU ABSOLUTELY WILL NEED** a free [GitHub](http://github.com/) account. You must set one up by the end of the first week of class if you do not have one already. You will be creating a separate, public repository for each homework or project, creating "releases" and submitting the releases to BB/Canvas along with a link to the repository. These repositories must exist for the entire semester as some will build upon others. Individuals who have moral/ethical/etc concerns with GitHub may choose to use other services such as [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) account. The following resources are available to help you get working with GitHub & R/RStudio on all platforms:
     - [Happy Git & GitHub for the useR](http://happygitwithr.com/)
 
 # Attendance/Participation Policy
 
-Videos will be made and posted online. You are responsible for viewing the content. If there are any issues with the content or accessing the content you are responsible for notifying the instructor when you encouter the issue.
+Videos will be made and posted online. You are responsible for viewing the content. If there are any issues with the content or accessing the content you are responsible for notifying the instructor when you encounter the issue.
 
 # Registrar Procedures Add/Drop Deadlines and Procedures:
 
@@ -93,7 +93,7 @@ In order to create a healthy and productive learning environment there are expec
 - It is expected that we will behave in a manner that is ethically consistent with college policy and in a manner that could not be interpreted as cheating or plagiarism.
 - The college defines Plagiarism as, "the intentional or unintentional failure to immediately, accurately, and completely cite and document the source of any language, ideas, summaries, hypotheses, conclusions, interpretations, speculations, graphs, charts, pictures, etc., or other material not entirely your own. This includes failure to cite work of your own that you have used previously."
 -  Cheating is defined as using or attempting to use unauthorized materials, information, or study aids in any academic exercise or activity. Failure to meet this expectation could result in a grade of F for the course.
-- Consequences for acts of plagairism and/or cheating result in a minimum of 0 for that assignment/quiz/test and maximum of F for the course, depending on the severity of the infringement of the policy.
+- Consequences for acts of plagiarism and/or cheating result in a minimum of 0 for that assignment/quiz/test and maximum of F for the course, depending on the severity of the infringement of the policy.
 
 - I welcome and encourage your input intended to improve the quality of your educational experience.
 
@@ -223,16 +223,17 @@ By the end of Week 1, you should:
 - Create a folder either on the RStudio Server or your own workstation (or both!) named `data220g'.
 - Create an RStudio project in that folder named `week01`. 
 - After reviewing this week's video (link TBD):
-    - Copy the CSV file mentioned in the video to the `week01` folder you created above. You can also find it at 
+    - Copy the CSV file mentioned in the video to the `week01` folder you created above. You can also find it at: <https://greatbaycommunitycollege.github.io/data220g/week01/2017-2008-nx-wx.csv> or in the course GitHub.
     - Create an R script named `week01.R` that:
         - reads in the CSV file
         - finds and reports the _year_ (only the year) with the lowest, average temperature
         - finds and reports the _year+month+day_ with the highest, average temperature (converted to Celsius)
         - computes and reports the mean and median averages temperatures per-month
-        - using the rounding technique from the video, computes the nearest-10 value for each average monthly temperature _then_ counts and reports how many average readings were in eaceh 10-"bucket"
-        - BONUS: Creates a simple plot showing trhe average montly temperature over time.
-    - We won't use GitHub for submissions this week (unless you are comfortable with that already). Make a ZIP file of your `week01` folder and submit it via Blackboard (I'm still working on Canvas access). If you are comfortable with GitHub, creatre a release and send me a link to it.
-- Submission is due by 23:59:59, Tuesday, January 23rd, 2018.
+        - using the rounding technique from the video, computes the nearest-10 value for each average monthly temperature _then_ counts and reports how many average readings were in each 10-"bucket"
+        - BONUS: Creates a simple plot showing the average monthly temperature over time.
+    - The code _must run_ without me having to tweak it at all. I will tweak it to get it to run if necessary, but it will not receive full credit.
+    - We won't use GitHub for submissions this week (unless you are comfortable with that already). Make a ZIP file of your `week01` folder and submit it via Blackboard (I'm still working on Canvas access). If you are comfortable with GitHub, create a release and send me a link to it.
+- Submission is due by `23:59:59, Tuesday, January 23rd, 2018`.
 
 ## Week 2
 ## Week 3
