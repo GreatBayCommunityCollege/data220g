@@ -7,6 +7,9 @@
 #' ### Data Frames
 #'
 #' - A _very special_ `list`
+
+?tibble::data_frame
+
 #' - One of the most foundational data structures in data science
 #' - where we'll spend alot of time in the coming weeks
 #' - Do the book reading before proceeding
@@ -16,15 +19,23 @@ library(tidyverse) # don't worry about the output from this just yet
 
 starwars # this is a built-in data set from the "tidyverse"
 
+class(starwars)
+
+typeof(starwars)
+
+mode(starwars)
+
+dim(starwars)
+
 data.frame(starwars)
 
 str(starwars)
 
-glimspe(starwars)
+glimpse(starwars)
 
 str(unclass(starwars))
 
-#' The reading covered some operaitons. We'll cover more in other classes And we'll continue
+#' The reading covered some operations. We'll cover more in other classes And we'll continue
 #' discussing data frames in the 5th and final segment for this one.
 
 #' ### More info
@@ -36,3 +47,4 @@ help("data.frame")
 help("unclass")
 help("str")
 help("glimpse")
+help("dim")
